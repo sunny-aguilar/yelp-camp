@@ -1,2 +1,2 @@
 # Yelp Camp Project
-node_modules
+node_modules/
