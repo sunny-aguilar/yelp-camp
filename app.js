@@ -23,8 +23,8 @@ app.get('/campgrounds', function(req, res) {
         {name: 'Cache Creek', image: 'https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg'},
         {name: 'South Lake Tahoe', image: 'https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg'}
     ];
-    // {campgrounds: campgrounds} -> campgrounds: is the name we want to give the data
-    // and the : campgrounds is the data were passing in
+    // {campgrounds: campgrounds} -> campgrounds: is the name we want to
+    // give the data and the : campgrounds is the data were passing in
     res.render('campgrounds', {campgrounds: campgrounds});
 });
 
