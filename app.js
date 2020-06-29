@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 
 // routes
 app.get('/', function(req, res) {
-    res.write('HELLO WORLD');
+    res.send('Hello yelp camp!');
 });
 
 
