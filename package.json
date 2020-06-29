@@ -1,0 +1,27 @@
+{
+  "name": "yelp-camp",
+  "version": "1.0.0",
+  "description": "Yelp camp app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunny-aguilar/yelp-camp.git"
+  },
+  "keywords": [
+    "yelp",
+    "camp",
+    "js",
+    "ejs",
+    "node",
+    "express"
+  ],
+  "author": "Sandro Aguilar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunny-aguilar/yelp-camp/issues"
+  },
+  "homepage": "https://github.com/sunny-aguilar/yelp-camp#readme"
+}
