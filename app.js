@@ -10,7 +10,9 @@ app.set('view engine', 'ejs');
 
 
 // routes
-
+app.get('/', function() {
+    
+});
 
 
 
