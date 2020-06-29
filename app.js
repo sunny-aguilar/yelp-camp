@@ -23,11 +23,11 @@ app.get('/campgrounds', function(req, res) {
         {name: 'Cache Creek', image: 'https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg'},
         {name: 'South Lake Tahoe', image: 'https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg'}
     ];
-    res.send('Campgrounds page');
+    // res.send('Campgrounds page');
     res.render('campgrounds');
 });
 
 
 // start server
 const port = 3000;
-app.listen(port, console.log(`Server is listening on port #{port}`));
+app.listen(port, console.log(`Server is listening on port ${port}`));
