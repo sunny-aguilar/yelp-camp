@@ -11,12 +11,9 @@ app.set('view engine', 'ejs');
 
 // routes
 app.get('/', function(req, res) {
-    res.send('This will be the landing page.');
-});
-
-app.get('/landing', function(req, res){
     res.render('landing');
 });
+
 
 
 
