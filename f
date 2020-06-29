@@ -8,7 +8,7 @@
 function push_commit()
 {
     #commit changes
-    git commit -am 'visual sounds'
+    git commit -am 'yelp camp'
     # push to github
     git push
 }
