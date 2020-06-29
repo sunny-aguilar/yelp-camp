@@ -16,7 +16,7 @@ function push_commit()
 function commit()
 {
     # commt changes only
-    git commit -am 'visual sounds'
+    git commit -am 'yelp camp'
 }
 
 # what to run
