@@ -17,11 +17,11 @@ app.get('/', function(req, res) {
 app.get('/campgrounds', function(req, res) {
     const campgrounds = [
         {name: 'Putah Creek', image: ''},
-        {name: 'Putah Creek', image: ''},
-        {name: 'Putah Creek', image: ''},
-        {name: 'Putah Creek', image: ''},
-        {name: 'Putah Creek', image: ''},
-        {name: 'Putah Creek', image: ''},
+        {name: 'Lake Berryesa', image: ''},
+        {name: 'American River North Fork', image: ''},
+        {name: 'Saramento River', image: ''},
+        {name: 'Cache Creek', image: ''},
+        {name: 'South Lake Tahoe', image: ''},
     ];
     res.send('Campgrounds page');
 });
