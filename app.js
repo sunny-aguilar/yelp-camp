@@ -15,6 +15,14 @@ app.get('/', function(req, res) {
 });
 
 app.get('/campgrounds', function(req, res) {
+    const campgrounds = [
+        {name: 'Putah Creek', image: ''},
+        {name: 'Putah Creek', image: ''},
+        {name: 'Putah Creek', image: ''},
+        {name: 'Putah Creek', image: ''},
+        {name: 'Putah Creek', image: ''},
+        {name: 'Putah Creek', image: ''},
+    ];
     res.send('Campgrounds page');
 });
 
