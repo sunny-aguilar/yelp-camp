@@ -1,6 +1,6 @@
 <h1>Campgrounds page!</h1>
-<% campgrounds.forEach(function() { %>
-    <%= <h3>campgrounds.name</h3> %>
+<% campgrounds.forEach(function(campground) { %>
+    <h4><%= campground.name %></h4>
 <% }); %>
 
 <%= campgrounds[0].name %>
