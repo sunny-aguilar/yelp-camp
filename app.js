@@ -10,8 +10,8 @@ app.set('view engine', 'ejs');
 
 
 // routes
-app.get('/', function() {
-    
+app.get('/', function(req, res) {
+    res.write('HELLO WORLD');
 });
 
 
