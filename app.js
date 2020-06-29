@@ -24,7 +24,7 @@ app.get('/campgrounds', function(req, res) {
         {name: 'South Lake Tahoe', image: 'https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg'}
     ];
     // res.send('Campgrounds page');
-    res.render('campgrounds');
+    res.render('campgrounds', {campgrounds: campgrounds});
 });
 
 
