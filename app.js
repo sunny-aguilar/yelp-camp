@@ -14,7 +14,9 @@ app.get('/', function(req, res) {
     res.send('This will be the landing page.');
 });
 
-
+app.get('landing', function(req, res){
+    res.send('This is the landing page.');
+});
 
 
 // start server
