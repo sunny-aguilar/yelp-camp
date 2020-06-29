@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 
 // routes
 app.get('/', function(req, res) {
-    res.send('Hello yelp camp!');
+    res.send('This will be the landing page.');
 });
 
 
