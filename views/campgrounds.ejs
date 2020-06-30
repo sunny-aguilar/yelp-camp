@@ -14,9 +14,9 @@
         <% campgrounds.forEach(function(campground) { %>
             <div class="col-md-3 col-sm-6">
                 <div class="img-thumbnail">
-                    <h3><%= campground.name %></h3>
                     <img src="<%= campground.image %>">
                 </div>
+                <h3><%= campground.name %></h3>
             </div>
         <% }); %>
     </div>
