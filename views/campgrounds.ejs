@@ -3,17 +3,18 @@
 
 
 <!-- content -->
-<header class="jumbotron">
-    <h1>Campgrounds page!</h1>
-</header>
-<a href="/campgrounds/new">Add New Campground</a>
-<% campgrounds.forEach(function(campground) { %>
-    <div>
-        <h3><%= campground.name %></h3>
-        <img src="<%= campground.image %>">
-    </div>
-<% }); %>
-
+<div class="container">
+    <header class="jumbotron">
+        <h1>Campgrounds page!</h1>
+    </header>
+    <a href="/campgrounds/new">Add New Campground</a>
+    <% campgrounds.forEach(function(campground) { %>
+        <div>
+            <h3><%= campground.name %></h3>
+            <img src="<%= campground.image %>">
+        </div>
+    <% }); %>
+</div>
 
 <!-- footer -->
 <%- include('partials/footer') %>
