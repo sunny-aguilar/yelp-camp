@@ -13,8 +13,9 @@
         <!-- <h3>California's Popular Camping Grounds</h3> -->
         <% campgrounds.forEach(function(campground) { %>
             <div class="col-md-3 col-sm-6">
-                <div class="img-thumbnail">
-                    <img src="<%= campground.image %>">
+                <div>
+                    <img class="img-thumbnail" src="<%= campground.image %>">
+                    <div class="caption"></div>
                 </div>
                 <h3><%= campground.name %></h3>
             </div>
