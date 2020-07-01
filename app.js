@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app data --> will be placed in database later
 const campgrounds = [
     {name: 'Putah Creek', image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg'},
+    {name: 'Lake Solano, image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg'},
     {name: 'Lake Berryesa', image: 'https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg'},
     {name: 'American River North Fork', image: 'https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg'},
     {name: 'Saramento River', image: 'https://images.pexels.com/photos/756780/pexels-photo-756780.jpeg'},
