@@ -41,7 +41,6 @@ app.get('/campgrounds', function(req, res) {
     res.render('campgrounds', {campgrounds: campgrounds});
 });
 
-
 // POST route
 app.post('/campgrounds', function(req, res) {
     // get data from form and add to campgrounds array
