@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 
 // connect to the mongoDB
-mongoose.connect('mongodb');
+mongoose.connect('mongodb://localhost/cat_app');
 
 
 // add a new cat to DB
