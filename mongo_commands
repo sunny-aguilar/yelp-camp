@@ -1,0 +1,7 @@
+# mongo commands
+
+# start server
+brew services start mongodb-community@4.2
+
+# shutdown server
+brew services stop mongodb-community@4.2
