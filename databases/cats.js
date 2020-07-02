@@ -3,6 +3,9 @@
 // get mongoose
 const mongoose = require('mongoose');
 
+// connect to the mongoDB
+
+
 
 // add a new cat to DB
 
