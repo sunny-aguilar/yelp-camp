@@ -17,9 +17,8 @@ db.once('open', function() {
     console.log('connection success');
 });
 
-
 // add a new cat to DB
-
+const catSchema = new mongoose.Schema({});
 
 // retrieve the cats from the DB and console.log() each
 
