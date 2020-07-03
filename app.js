@@ -29,20 +29,6 @@ const campgroundSchema = new mongoose.Schema({
 });
 const Campground = mongoose.model('Campground', campgroundSchema);
 
-// add app data
-// Campground.create(
-//     {name: 'Lake Solano', image: 'https://images.pexels.com/photos/354611/pexels-photo-354611.jpeg'},
-//     function(err, campground) {
-//         if (err) {
-//             console.log(err);
-//         }
-//         else {
-//             console.log('Newly created campground:');
-//             console.log(campground);
-//         }
-//     }
-// );
-
 
 
 // routes
