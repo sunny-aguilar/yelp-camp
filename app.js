@@ -97,6 +97,7 @@ app.get('/campgrounds/:id', function(req, res) {
     // find campground with provided id
     Campground.findById(req.params.id, function(err, foundCampground) {
         //
+        console.log(err);
     });
 
     // render template with that ID
