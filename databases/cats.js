@@ -26,9 +26,47 @@ const catSchema = new mongoose.Schema({         // define a schema
 const Cat = mongoose.model('Cat', catSchema);   // compile schema into model
 
 // add a new cat to DB
+// const george = new Cat({
+//     name: 'Simba',
+//     age: 9,
+//     temperament: 'Fun '
+// });
+
+// george.save(function(err, cat) {    // save data to database & confirm
+//     if (err) {
+//         console.log('Data was not saved!');
+//     }
+//     else {
+//         console.log('A cat was saved to the DB.')
+//         console.log(cat);
+//     }
+// });
+
+// Cat.create({         // other way to create and save cat
+//     name: 'Cheetah',
+//     age: 4,
+//     temperament: 'deadly'
+// }, function(err, cat) {
+//     if (err) {
+//         console.log('Error creating cat.');
+//     }
+//     else {
+//         console.log('Success creating cat.');
+//         console.log(Cat);
+//     }
+// });
 
 // retrieve the cats from the DB and console.log() each
-
+Cat.find({}, function(err, cats) {
+    if (err) {
+        console.log('Error condition on find()');
+        console.log(err);
+    }
+    else {
+        console.log('Find() successful.');
+        console.log(cats);
+    }
+});
 
 
 
