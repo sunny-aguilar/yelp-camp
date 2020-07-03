@@ -94,6 +94,7 @@ app.post('/campgrounds', function(req, res) {
             console.log(err);
         }
         else {
+            // redirect to campgrounds page
             res.redirect('/campgrounds');
         }
     });
