@@ -97,7 +97,8 @@ app.get('/campgrounds/:id', function(req, res) {
     // find campground with provided id
 
     // render template with that ID
-    res.send('Specific campground ID.');
+    res.render('show');
+    // res.send('Specific campground ID.');
 });
 
 
