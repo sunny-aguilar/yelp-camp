@@ -23,7 +23,7 @@ const catSchema = new mongoose.Schema({
     temperament: String
 });
 
-const Cat = mongoose.model('Cat', catSchema);
+const Cat = mongoose.model('Cat', catSchema);   // compile schema into model
 
 // add a new cat to DB
 
