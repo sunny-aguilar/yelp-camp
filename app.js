@@ -79,7 +79,7 @@ app.get('/campgrounds/new', function(req, res) {
 // show specific campground
 app.get('/campgrounds/:id', function(req, res) {
     // render response
-    res.send();
+    res.send('Specific campground ID.');
 });
 
 
