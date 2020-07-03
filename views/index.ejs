@@ -14,15 +14,14 @@
             <div class="col-md-3 col-sm-6">
                 <div class="card">
                     <div class="card-body">
-                        
+                        <img class="card-img-top" src="<%= campground.image %>">
+                        <div class="card-body">
+                            <p class="card-text text-center"><%= campground.name %></p>
+                        </div>
+                        <p class="card-text">
+                            <a href="/campgrounds/<%= campground._id %> " class="btn btn-primary">More Info</a>
+                        </p>
                     </div>
-                    <img class="card-img-top" src="<%= campground.image %>">
-                    <div class="card-body">
-                        <p class="card-text text-center"><%= campground.name %></p>
-                    </div>
-                    <p class="card-text">
-                        <a href="/campgrounds/<%= campground._id %> " class="btn btn-primary">More Info</a>
-                    </p>
                 </div>
             </div>
         <% }); %>
