@@ -69,10 +69,6 @@ app.post('/campgrounds', function(req, res) {
             res.redirect('/campgrounds');
         }
     });
-
-    // redirect back to campgrounds page
-    // default redirect is to get request
-    // res.redirect('/campgrounds');
 });
 
 // new campground route
