@@ -35,13 +35,13 @@ const Campground = mongoose.model('Campground', campgroundSchema);
 // URLs: https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg, https://images.pexels.com/photos/354611/pexels-photo-354611.jpeg, https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg, https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg, https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg, https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg, https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg, https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg
 
 // for debugging purposes
-Campground.create(
-    {
-        name: 'Putah Creek',
-        image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
-        description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River. '
-    }
-);
+// Campground.create(
+//     {
+//         name: 'Putah Creek',
+//         image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
+//         description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River. '
+//     }
+// );
 
 
 
