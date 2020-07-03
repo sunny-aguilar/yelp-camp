@@ -36,9 +36,9 @@ const Campground = mongoose.model('Campground', campgroundSchema);
 // for debugging purposes
 Campground.create(
     {
-        name: '',
-        image: '',
-        description: ''
+        name: 'Putah Creek',
+        image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
+        description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River. '
     }
 );
 
