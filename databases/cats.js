@@ -18,7 +18,11 @@ db.once('open', function() {
 });
 
 // add a new cat to DB
-const catSchema = new mongoose.Schema({});
+const catSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    temperament: String
+});
 
 // retrieve the cats from the DB and console.log() each
 
