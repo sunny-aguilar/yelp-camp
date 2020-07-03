@@ -23,6 +23,8 @@ const catSchema = new mongoose.Schema({
     temperament: String
 });
 
+const Cat = mongoose.model();
+
 // add a new cat to DB
 
 // retrieve the cats from the DB and console.log() each
