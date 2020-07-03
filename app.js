@@ -45,11 +45,6 @@ const Campground = mongoose.model('Campground', campgroundSchema);
 
 
 
-
-
-
-
-
 // routes
 app.get('/', function(req, res) {
     res.render('landing');
