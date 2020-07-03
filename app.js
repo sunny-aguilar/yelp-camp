@@ -76,7 +76,8 @@ app.get('/campgrounds/new', function(req, res) {
     res.render('new.ejs');
 });
 
-// show specific campground route
+// show specific campground
+app.get('/campgrounds/:id');
 
 
 
