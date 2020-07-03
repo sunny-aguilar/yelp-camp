@@ -91,7 +91,7 @@ app.get('/campgrounds/new', function(req, res) {
     res.render('new.ejs');
 });
 
-// show specific campground
+// show specific campground & additional campground info
 // :id can be any string, test it out in browser /campgrounds/asdfads
 app.get('/campgrounds/:id', function(req, res) {
     // find campground with provided id
