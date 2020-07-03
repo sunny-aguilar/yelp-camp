@@ -77,7 +77,9 @@ app.get('/campgrounds/new', function(req, res) {
 });
 
 // show specific campground
-app.get('/campgrounds/:id');
+app.get('/campgrounds/:id', function() {
+    //
+});
 
 
 
