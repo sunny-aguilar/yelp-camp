@@ -31,6 +31,8 @@ const campgroundSchema = new mongoose.Schema({
 const Campground = mongoose.model('Campground', campgroundSchema);
 
 
+// for debugging purposes
+
 
 // routes
 app.get('/', function(req, res) {
