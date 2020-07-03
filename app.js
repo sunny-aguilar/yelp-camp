@@ -96,18 +96,15 @@ app.get('/campgrounds/new', function(req, res) {
 app.get('/campgrounds/:id', function(req, res) {
     // find campground with provided id
     Campground.findById(req.params.id, function(err, foundCampground) {
-        //
         if (err) {
+            // handle error
             console.log(err);
         }
         else {
-            //
+            // render template with that ID
+            res.render('show.ejs');
         }
     });
-
-    // render template with that ID
-    res.render('show.ejs');
-    // res.send('Specific campground ID.');
 });
 
 
