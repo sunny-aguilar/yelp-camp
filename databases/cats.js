@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 
 // connect to the mongoDB
-mongoose.connect('mongodb://localhost/cat_app', {
+mongoose.connect('mongodb://alocalhost/cat_app', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
