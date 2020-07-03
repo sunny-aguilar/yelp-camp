@@ -61,7 +61,7 @@ app.get('/campgrounds', function(req, res) {
             // render the file
             // {campgrounds: campgrounds} -> campgrounds: is the name we want to
             // give the data and the :allCampgrounds is the data were passing in
-            res.render('campgrounds', {campgrounds: allCampgrounds});
+            res.render('index', {campgrounds: allCampgrounds});
         }
     });
 });
