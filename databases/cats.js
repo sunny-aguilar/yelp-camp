@@ -17,7 +17,7 @@ db.once('open', function() {
     console.log('connection success');
 });
 
-const catSchema = new mongoose.Schema({
+const catSchema = new mongoose.Schema({         // 
     name: String,
     age: Number,
     temperament: String
