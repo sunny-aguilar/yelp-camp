@@ -45,7 +45,7 @@ app.get('/campgrounds', function(req, res) {
         else {
             // render the file
             // {campgrounds: campgrounds} -> campgrounds: is the name we want to
-            // give the data and the :campgrounds is the data were passing in
+            // give the data and the :allCampgrounds is the data were passing in
             res.render('campgrounds', {campgrounds: allCampgrounds});
         }
     });
