@@ -80,6 +80,7 @@ app.get('/campgrounds/new', function(req, res) {
 // :id can be any string, test it out in browser /campgrounds/asdfads
 app.get('/campgrounds/:id', function(req, res) {
     // find campground with provided id
+
     // render template with that ID
     res.send('Specific campground ID.');
 });
