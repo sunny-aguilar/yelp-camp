@@ -25,7 +25,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 // SCHEMA SET-UP
 const campgroundSchema = new mongoose.Schema({
     name: String,
-    image: String
+    image: String,
+    description: String
 });
 const Campground = mongoose.model('Campground', campgroundSchema);
 
