@@ -9,6 +9,13 @@ mongoose.connect('mongodb://localhost/cat_app', {
     useUnifiedTopology: true
 });
 
+// connections success/errors
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  console.error.bind(console, 'connection success')
+});
+
 
 // add a new cat to DB
 
