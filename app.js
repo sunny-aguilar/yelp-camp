@@ -102,7 +102,7 @@ app.get('/campgrounds/:id', function(req, res) {
         }
         else {
             // render template with that ID
-            res.render('show.ejs');
+            res.render('show', {campground: foundCampground});
         }
     });
 });
