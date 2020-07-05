@@ -7,6 +7,10 @@ const app = express();
 // modules
 const Campground = require('./models/campground');
 
+// require seeds module
+const seedDB = require('./seeds');
+seedDB();
+
 // add mongoose & connect to mondoDB
 // if DB does not exits, this will create one otherwise connect to existing one
 const mongoose = require('mongoose');
@@ -33,7 +37,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //     {
 //         name: 'Putah Creek',
 //         image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
-//         description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River. '
+//         description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River.'
 //     }
 // );
 
