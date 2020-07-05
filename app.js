@@ -1,29 +1,24 @@
 // yelp camp application
 
-// add express module
-const express = require('express');
-const app = express();
+// add module
+const   express     = require('express'),               // add express module
+        app         = express(),
+        bodyParser  = require('body-parser'),        // use body-parser to get form data
+        mongoose    = require('mongoose'),                 // add mongoose
+        Campground  = require('./models/campground'),    // require seeds module
+        seedDB      = require('./seeds');
 
-// modules
-const Campground = require('./models/campground');
-
-// require seeds module
-const seedDB = require('./seeds');
-// seedDB();
+seedDB();
 
 // add mongoose & connect to mondoDB
 // if DB does not exits, this will create one otherwise connect to existing one
-const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/yelp_camp', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
-// use body-parser to get form data
-const bodyParser = require('body-parser');
 
-// use EJS
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');          // use EJS
 
 // use body-parser --> {} object is required, just memorize it
 app.use(bodyParser.urlencoded({extended: true}));
