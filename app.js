@@ -4,6 +4,9 @@
 const express = require('express');
 const app = express();
 
+// modules
+const Campground = require('./models/campground');
+
 // add mongoose & connect to mondoDB
 // if DB does not exits, this will create one otherwise connect to existing one
 const mongoose = require('mongoose');
@@ -21,15 +24,6 @@ app.set('view engine', 'ejs');
 // use body-parser --> {} object is required, just memorize it
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-// SCHEMA SET-UP
-const campgroundSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    description: String
-});
-const Campground = mongoose.model('Campground', campgroundSchema);
-
 // names: Putah Creek, Lake Solano, Lake Berryesa, American River North Fork, Sacramento River, Folsom Lake, Cache Creek, South Lake Tahoe
 
 // URLs: https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg, https://images.pexels.com/photos/354611/pexels-photo-354611.jpeg, https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg, https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg, https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg, https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg, https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg, https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg
@@ -45,8 +39,7 @@ const Campground = mongoose.model('Campground', campgroundSchema);
 
 
 
-
-// routes
+// ROUTES
 app.get('/', function(req, res) {
     res.render('landing');
 });
