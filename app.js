@@ -8,34 +8,19 @@ const   express     = require('express'),               // add express module
         Campground  = require('./models/campground'),    // require seeds module
         seedDB      = require('./seeds');
 
-seedDB();
-
+// CONFIGURATION
 // add mongoose & connect to mondoDB
 // if DB does not exits, this will create one otherwise connect to existing one
 mongoose.connect('mongodb://localhost/yelp_camp', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
-
-
 app.set('view engine', 'ejs');          // use EJS
-
 // use body-parser --> {} object is required, just memorize it
 app.use(bodyParser.urlencoded({extended: true}));
 
-// names: Putah Creek, Lake Solano, Lake Berryesa, American River North Fork, Sacramento River, Folsom Lake, Cache Creek, South Lake Tahoe
-
-// URLs: https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg, https://images.pexels.com/photos/354611/pexels-photo-354611.jpeg, https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg, https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg, https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg, https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg, https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg, https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg
-
-// for debugging purposes
-// Campground.create(
-//     {
-//         name: 'Putah Creek',
-//         image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
-//         description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River.'
-//     }
-// );
-
+// seed database
+seedDB();
 
 
 // ROUTES
@@ -88,13 +73,14 @@ app.get('/campgrounds/new', function(req, res) {
 // :id can be any string, test it out in browser /campgrounds/asdfads
 app.get('/campgrounds/:id', function(req, res) {
     // find campground with provided id
-    Campground.findById(req.params.id, function(err, foundCampground) {
+    Campground.findById(req.params.id).populate('comments').exec(function(err, foundCampground) {
         if (err) {
             // handle error
             console.log(err);
         }
         else {
             // render template with that ID
+            console.log(foundCampground);
             res.render('show', {campground: foundCampground});
         }
     });
