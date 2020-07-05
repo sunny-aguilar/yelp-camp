@@ -9,7 +9,7 @@ const Campground = require('./models/campground');
 
 // require seeds module
 const seedDB = require('./seeds');
-seedDB();
+// seedDB();
 
 // add mongoose & connect to mondoDB
 // if DB does not exits, this will create one otherwise connect to existing one

@@ -3,6 +3,7 @@
 // pull in required modules
 const mongoose = require('mongoose');
 const Campground = require('./models/campground');
+const Comment = require('./models/comment');
 
 
 // see data
@@ -73,27 +74,23 @@ function seedDB() {
                             {
                                 text: 'This is a comment',
                                 author: 'Homer'
-                            }, function(err, comment) {
+                            },
+                            function(err, comment) {
                                 if (err) {
                                     console.log(err);
                                 }
                                 else {
-                                    campground.comments.push(comment);
-                                    campground.save();
                                     console.log('Created new comment.');
+                                    campground.comments.push(comment._id);
+                                    campground.save();
                                 }
-                            });
+                            }
+                        );
                     }
                 });
             });
         }
     });
-
-
-
-
-    // add comments
-
 }
 
 // export function
