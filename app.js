@@ -71,8 +71,8 @@ app.post('/campgrounds', function(req, res) {
     // get data from form and add to campgrounds array
     let name = req.body.name;
     let image = req.body.image;
-    let desk = req.body.description;
-    let newCampground = {name: name, image: image};
+    let desc = req.body.description;
+    let newCampground = {name: name, image: image, description: desc};
 
     // create new campground and save to database
     Campground.create(newCampground, function(err, newlyCreated) {
