@@ -156,7 +156,7 @@ app.get('/register', function(req, res) {
 // handle sign up logic
 app.post('/register', function(req, res) {
     const newUser = new User({username: req.body.username});
-    User.register(newUser, req.body.username, function(err, user) {
+    User.register(newUser, req.body.password, function(err, user) {
         if (err) {
             console.log(err);
             res.render('register');
