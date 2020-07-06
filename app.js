@@ -28,6 +28,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 // seed database
 seedDB();
 
+// PASSPORT CONFIGURATION
+app.use(require('express-session')({
+    secret: 'Moe always wags his tail when he sees me!',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use();
+
 
 // ROUTES
 app.get('/', function(req, res) {
