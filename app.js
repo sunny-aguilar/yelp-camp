@@ -171,7 +171,8 @@ app.get('/login', function(req, res) {
 });
 
 // handle login logic
-app.post('/login', passport.authenticate('local', {}), function(req, res) {
+app.post('/login', passport.authenticate('local',
+    {successRedirect: '/campgrounds'}), function(req, res) {
     //
 });
 
