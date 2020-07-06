@@ -171,9 +171,8 @@ app.get('/login', function(req, res) {
 });
 
 // handle login logic
-app.post('/login', function(req, res) {
-    res.send('Login Logic');
-    // res.render();
+app.post('/login', passport.authenticate('local', {}), function(req, res) {
+    //
 });
 
 
