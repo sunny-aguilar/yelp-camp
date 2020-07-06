@@ -20,13 +20,11 @@ mongoose.connect('mongodb://localhost/yelp_camp', {
     useUnifiedTopology: true
 });
 
-app.use(express.static(__dirname + '/public'));  // css file in public dir
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');                  // use EJS
 // use body-parser --> {} object is required, just memorize it
-app.use(bodyParser.urlencoded({extended: true}));
-
-// seed database
-seedDB();
+app.use(express.static(__dirname + '/public'));  // css file in public dir
+seedDB();                                       // seed database
 
 // PASSPORT CONFIGURATION
 app.use(require('express-session')({
