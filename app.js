@@ -155,7 +155,18 @@ app.get('/register', function(req, res) {
 
 // handle sign up logic
 app.post('/register', function(req, res) {
-    User.register(new User({username: req.body.username}));
+    const newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.username, function(err, user) {
+        if (err) {
+            console.log(err);
+            res.render('register');
+        }
+        else {
+            passport.authenticate('local')(req, res, function() {
+                res.redirect('/campgrounds');
+            });
+        }
+    });
 });
 
 // start server & listen for connections
