@@ -165,6 +165,17 @@ app.post('/register', function(req, res) {
     });
 });
 
+// show login form
+app.get('/login', function(req, res) {
+    res.render('Login!');
+});
+
+
+
+
+
+
+
 // start server & listen for connections
 const port = 3000;
 app.listen(port, console.log(`Server is listening on port ${port}`));
