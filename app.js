@@ -154,7 +154,9 @@ app.get('/register', function(req, res) {
 });
 
 // handle sign up logic
-
+app.post('/register', function(req, res) {
+    res.send('Signing you up...');
+});
 
 // start server & listen for connections
 const port = 3000;
