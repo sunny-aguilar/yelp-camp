@@ -35,6 +35,7 @@ app.use(require('express-session')({
     saveUninitialized: false
 }));
 app.use(passport.initialize());
+app.use(passport.session());
 
 
 // ROUTES
