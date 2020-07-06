@@ -146,7 +146,7 @@ app.post('/campgrounds/:id/comments', function(req, res) {
 // AUTHENTICATION ROUTES
 /* ------------------------ */
 
-// show registration form
+// REGISTRATION - show registration form
 app.get('/register', function(req, res) {
     res.render('register');
 });
@@ -165,7 +165,7 @@ app.post('/register', function(req, res) {
     });
 });
 
-// show login form
+// LOGIN - show login form
 app.get('/login', function(req, res) {
     res.render('login');
 });
