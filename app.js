@@ -145,6 +145,11 @@ app.post('/campgrounds/:id/comments', function(req, res) {
 
 
 
+// AUTHENTICATION ROUTES
+app.get('/register', function(req, res) {
+    res.render('register');
+});
+
 
 
 // start server & listen for connections
