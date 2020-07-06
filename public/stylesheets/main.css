@@ -1,5 +1,12 @@
 
-body {
-    background: purple;
+.card-body {
+    padding: 0;
 }
 
+.img-thumbnail {
+    padding: 0;
+}
+
+.img-thumbnail .caption-full {
+    padding: 9px;
+}

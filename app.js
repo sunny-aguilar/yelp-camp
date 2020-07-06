@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/yelp_camp', {
     useUnifiedTopology: true
 });
 
-app.use(express.static(__dirname + 'public'));  // css file in public dir
+app.use(express.static(__dirname + '/public'));  // css file in public dir
 app.set('view engine', 'ejs');                  // use EJS
 // use body-parser --> {} object is required, just memorize it
 app.use(bodyParser.urlencoded({extended: true}));
