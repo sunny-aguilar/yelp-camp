@@ -172,7 +172,8 @@ app.get('/login', function(req, res) {
 
 // handle login logic
 app.post('/login', function(req, res) {
-    res.render();
+    res.send('Login Logic');
+    // res.render();
 });
 
 
