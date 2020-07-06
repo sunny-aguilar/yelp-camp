@@ -170,7 +170,10 @@ app.get('/login', function(req, res) {
     res.render('login');
 });
 
-
+// handle login logic
+app.post('/login', function(req, res) {
+    res.render();
+});
 
 
 
