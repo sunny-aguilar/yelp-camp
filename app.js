@@ -167,7 +167,7 @@ app.post('/register', function(req, res) {
 
 // show login form
 app.get('/login', function(req, res) {
-    res.render('Login!');
+    res.render('login');
 });
 
 
