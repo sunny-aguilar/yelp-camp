@@ -155,7 +155,7 @@ app.get('/register', function(req, res) {
 
 // handle sign up logic
 app.post('/register', function(req, res) {
-    res.send('Signing you up...');
+    User.register(new User({username: req.body.username}));
 });
 
 // start server & listen for connections
