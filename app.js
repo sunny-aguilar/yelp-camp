@@ -5,8 +5,11 @@ const   express     = require('express'),           // add express module
         app         = express(),
         bodyParser  = require('body-parser'),       // use body-parser to get form data
         mongoose    = require('mongoose'),              // add mongoose
+        passport    = require('passport'),
+        LocalStrategy = require('passport-local'),
         Campground  = require('./models/campground'),   // require seeds module
         Comment     = require('./models/comment'),
+        User        = require('./models/user'),
         seedDB      = require('./seeds');
 
 // CONFIGURATION
