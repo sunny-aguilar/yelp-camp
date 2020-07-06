@@ -144,12 +144,16 @@ app.post('/campgrounds/:id/comments', function(req, res) {
 });
 
 
-
+/* ------------------------ */
 // AUTHENTICATION ROUTES
+/* ------------------------ */
+
+// show registration form
 app.get('/register', function(req, res) {
     res.render('register');
 });
 
+// handle sign up logic
 
 
 // start server & listen for connections
