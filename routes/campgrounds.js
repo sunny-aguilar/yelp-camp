@@ -44,6 +44,7 @@ router.post('/', isLoggedIn, function(req, res) {
         else {
             // redirect to campgrounds page
             // default redirect is to get request
+            console.log(newlyCreated);
             res.redirect('/campgrounds');
         }
     });
