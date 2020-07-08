@@ -83,7 +83,7 @@ router.get('/:id/edit', function(req, res) {
                 res.redirect('/campgrounds');
             }
             else {
-                if (foundCampground.author.id === req.user._id) {
+                if (foundCampground.author.id.equals(req.user._id)) {
 
                 }
                 res.render('campgrounds/edit', {campground: foundCampground});
