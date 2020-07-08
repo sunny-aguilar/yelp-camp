@@ -72,6 +72,13 @@ router.get('/:id', function(req, res) {
     });
 });
 
+// edit campgrounds
+
+
+
+
+
+
 
 // middleware - checks if user is logged in
 function isLoggedIn(req, res, next) {
