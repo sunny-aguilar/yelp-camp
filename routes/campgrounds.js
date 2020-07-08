@@ -94,7 +94,7 @@ router.get('/:id/edit', checkCampgroundOwnership, function(req, res) {
     }
     else {
         // if not signed in, redirect
-        res.send('You need to be logged in');
+        res.redirect('back');
     }
 });
 
