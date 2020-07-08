@@ -158,7 +158,7 @@ function checkCampgroundOwnership(req, res, next) {
     }
     else {
         // if not signed in, redirect
-        res.send('You need to be logged in');
+        res.redirect('back');
     }
 }
 
