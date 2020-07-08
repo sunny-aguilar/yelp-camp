@@ -84,9 +84,11 @@ router.get('/:id/edit', function(req, res) {
             }
             else {
                 if (foundCampground.author.id.equals(req.user._id)) {
-
+                    res.render('campgrounds/edit', {campground: foundCampground});
                 }
-                res.render('campgrounds/edit', {campground: foundCampground});
+                else {
+                    res.send('You dont have permission to do that!');
+                }
             }
         });
     }
