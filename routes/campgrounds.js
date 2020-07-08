@@ -118,7 +118,7 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login');
 }
 
-// 
+// middleware - checks if user has permissions
 function checkCampgroundOwnership(req, res, next) {
     // is user logged in
     if (req.isAuthenticated()) {
