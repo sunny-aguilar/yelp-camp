@@ -30,7 +30,7 @@ router.post('/', isLoggedIn, function(req, res) {
     let image = req.body.image;
     let desc = req.body.description;
     let newCampground = {name: name, image: image, description: desc};
-    console.log(req.user); // DELETE CONSOLE LOG
+
     // create new campground and save to database
     Campground.create(newCampground, function(err, newlyCreated) {
         if (err) {
