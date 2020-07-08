@@ -98,6 +98,11 @@ router.put('/:id', function(req, res) {
     });
 });
 
+// destroy campground route
+router.delete('/:id', function(req, res) {
+    res.send('DELETE ROUTE')
+});
+
 
 
 
