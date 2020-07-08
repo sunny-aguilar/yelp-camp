@@ -137,7 +137,7 @@ function isLoggedIn(req, res, next) {
 }
 
 // 
-function checkCampgroundOwnership() {
+function checkCampgroundOwnership(req, res, next) {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
