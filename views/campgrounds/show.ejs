@@ -25,6 +25,9 @@
                         <em>Submitted by: <%= campground.author.username %></em>
                     </p>
                     <a class='btn btn-warning' href='/campgrounds/<%= campground._id %>/edit'>edit</a>
+                    <form action='/campgrounds/<%= campground._id %>' method='POST'>
+                        <button class="btn btn-outline-danger">delete</button>
+                    </form>
                 </div>
             </div>
             <div class="card card-body bg-light">
