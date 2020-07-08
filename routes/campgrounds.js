@@ -24,7 +24,7 @@ router.get('/', function(req, res) {
 });
 
 // POST route
-router.post('/', function(req, res) {
+router.post('/', isLoggedIn, function(req, res) {
     // get data from form and add to campgrounds array
     let name = req.body.name;
     let image = req.body.image;
