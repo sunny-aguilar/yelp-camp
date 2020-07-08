@@ -76,6 +76,7 @@ router.get('/:id', function(req, res) {
 router.get('/:id/edit', function(req, res) {
     // is user logged in
     if (req.isAuthenticated()) {
+        // if logged in, does user own the campground otherwise redirect
         Campground.findById(req.params.id, function(err, foundCampground) {
             if (err) {
                 res.redirect('/campgrounds');
@@ -88,7 +89,6 @@ router.get('/:id/edit', function(req, res) {
     else {
         res.send('You need to be logged in');
     }
-    // if logged in, does user own the campground otherwise redirect
     // if no, redirect
 
 });
