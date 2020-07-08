@@ -137,4 +137,12 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login');
 }
 
+// 
+function checkCampgroundOwnership() {
+    
+}
+
+
+
+
 module.exports = router;
