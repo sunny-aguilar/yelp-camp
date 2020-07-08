@@ -93,10 +93,9 @@ router.get('/:id/edit', function(req, res) {
         });
     }
     else {
+        // if not signed in, redirect
         res.send('You need to be logged in');
     }
-    // if no, redirect
-
 });
 
 // update campground route
