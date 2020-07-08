@@ -45,7 +45,7 @@ router.post('/', function(req, res) {
 });
 
 // new campground route
-router.get('/new', function(req, res) {
+router.get('/new', isLoggedIn, function(req, res) {
     res.render('campgrounds/new');
 });
 
