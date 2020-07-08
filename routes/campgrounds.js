@@ -93,7 +93,7 @@ router.get('/:id/edit', checkCampgroundOwnership, function(req, res) {
         });
     }
     else {
-        // if not signed in, redirect
+        // if not signed in, go back to previous page user was on
         res.redirect('back');
     }
 });
