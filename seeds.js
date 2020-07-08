@@ -11,42 +11,74 @@ const data = [
     {
         name: 'Putah Creek',
         image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
-        description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River.'
+        description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River.',
+        author:{
+            id : "588c2e092403d111454fff76",
+            username: "Jack"
+        }
     },
     {
         name: 'Lake Solano',
         image: 'https://images.pexels.com/photos/354611/pexels-photo-354611.jpeg',
-        description: 'Lake Solano is a reservoir formed by Putah Diversion Dam impounding Putah Creek, located in the Vaca Mountains within Yolo County and northern Solano County, California.'
+        description: 'Lake Solano is a reservoir formed by Putah Diversion Dam impounding Putah Creek, located in the Vaca Mountains within Yolo County and northern Solano County, California.',
+        author:{
+            id : "588c2e092403d111454fff71",
+            username: "Jill"
+        }
     },
     {
         name: 'Lake Berryesa',
         image: 'https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg',
-        description: 'Lake Berryessa is the largest lake in Napa County, California. This reservoir in the Vaca Mountains was formed following the construction of the Monticello Dam on Putah Creek in the 1950s.'
+        description: 'Lake Berryessa is the largest lake in Napa County, California. This reservoir in the Vaca Mountains was formed following the construction of the Monticello Dam on Putah Creek in the 1950s.',
+        author:{
+            id : "588c2e092403d111454fff77",
+            username: "Jane"
+        }
     },
     {
-        name: 'American River North Fork',
+        name: 'American River Fork',
         image: 'https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg',
-        description: 'The North Fork American River is the longest branch of the American River in Northern California. It is 88 miles long from its source at the crest of the Sierra Nevada, near Lake Tahoe, to its mouth at Folsom Lake northeast of Sacramento.'
+        description: 'The North Fork American River is the longest branch of the American River in Northern California. It is 88 miles long from its source at the crest of the Sierra Nevada, near Lake Tahoe, to its mouth at Folsom Lake northeast of Sacramento.',
+        author:{
+            id : "654z2e0924s4d010454rtr1",
+            username: "Doe"
+        }
     },
     {
         name: 'Sacramento River',
         image: 'https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg',
-        description: 'The Sacramento River is the principal river of Northern California in the United States, and is the largest river in California. Rising in the Klamath Mountains, the river flows south for 400 miles before reaching the Sacramento–San Joaquin River Delta and San Francisco Bay. '
+        description: 'The Sacramento River is the principal river of Northern California in the United States, and is the largest river in California. Rising in the Klamath Mountains, the river flows south for 400 miles before reaching the Sacramento–San Joaquin River Delta and San Francisco Bay.',
+        author:{
+            id : "z44545cn44eyt000011zz1",
+            username: "Barry"
+        }
     },
     {
         name: 'Folsom Lake',
         image: 'https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg',
-        description: 'Folsom Lake is a reservoir on the American River in the Sierra Nevada foothills of California, United States. It is located within Placer, El Dorado, and Sacramento counties. It is about 25 mi northeast of Sacramento.'
+        description: 'Folsom Lake is a reservoir on the American River in the Sierra Nevada foothills of California, United States. It is located within Placer, El Dorado, and Sacramento counties. It is about 25 mi northeast of Sacramento.',
+        author:{
+            id : "14dfjuZ465s8sjhy6678dE1",
+            username: "Floof"
+        }
     },
     {
         name: 'Cache Creek',
         image: 'https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg',
-        description: 'Cache Creek is an 87-mile-long stream in Lake, Colusa and Yolo counties, California.'
+        description: 'Cache Creek is an 87-mile-long stream in Lake, Colusa and Yolo counties, California.',
+        author:{
+            id : "Z09df7sh344rt55f2VBDF23",
+            username: "Darius"
+        }
     },
     {
         name: 'South Lake Tahoe',
         image: 'https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg',
-        description: 'South Lake Tahoe is a California resort city on Lake Tahoe, in the Sierra Nevada mountains. It’s known for nearby ski resorts and beaches, like El Dorado Beach, with its picnic areas. The city’s restaurants and bars merge with the casinos of adjacent Stateline, Nevada. Van Sickle Bi-State Park has wooded trails and lake views. West of the city, Emerald Bay State Park includes Vikingsholm, a 1929 Nordic-style mansion.'
+        description: 'South Lake Tahoe is a California resort city on Lake Tahoe, in the Sierra Nevada mountains. It’s known for nearby ski resorts and beaches, like El Dorado Beach, with its picnic areas. The city’s restaurants and bars merge with the casinos of adjacent Stateline, Nevada. Van Sickle Bi-State Park has wooded trails and lake views. West of the city, Emerald Bay State Park includes Vikingsholm, a 1929 Nordic-style mansion.',
+        author:{
+            id : "89FdV1c00x363fD4eFr01Zz",
+            username: "Paris"
+        }
     }
 ];
 
