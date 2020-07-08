@@ -151,7 +151,7 @@ function checkCampgroundOwnership(req, res, next) {
                     next();
                 }
                 else {
-                    res.send('You dont have permission to do that!');
+                    res.redirect('');
                 }
             }
         });
