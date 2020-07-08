@@ -74,7 +74,7 @@ router.get('/:id', function(req, res) {
 });
 
 // edit campgrounds
-router.get('/:id/edit', function(req, res) {
+router.get('/:id/edit', checkCampgroundOwnership, function(req, res) {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
