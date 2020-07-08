@@ -92,11 +92,10 @@ router.put('/:id', function(req, res) {
             res.redirect('/campgrounds');
         }
         else {
+            // redirect show campgrounds page
             res.redirect('/campgrounds/' + req. params.id);
         }
     });
-
-    // redirect show campgrounds page
 });
 
 
