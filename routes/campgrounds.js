@@ -74,6 +74,9 @@ router.get('/:id', function(req, res) {
 
 // edit campgrounds
 router.get('/:id/edit', function(req, res) {
+    // is user logged in
+
+    
     Campground.findById(req.params.id, function(err, foundCampground) {
         if (err) {
             res.redirect('/campgrounds');
