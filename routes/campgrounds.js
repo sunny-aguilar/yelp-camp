@@ -80,7 +80,7 @@ router.get('/:id/edit', checkCampgroundOwnership, function(req, res) {
         // if logged in, does user own the campground otherwise redirect
         Campground.findById(req.params.id, function(err, foundCampground) {
             if (err) {
-                res.redirect('/campgrounds');
+                res.redirect('back');
             }
             else {
                 if (foundCampground.author.id.equals(req.user._id)) {
