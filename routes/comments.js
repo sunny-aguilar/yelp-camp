@@ -42,7 +42,6 @@ router.post('/', isLoggedIn, function(req, res) {
                     comment.save();
                     campground.comments.push(comment);
                     campground.save();
-                    console.log(comment); // delete this comment
                     res.redirect('/campgrounds/' + campground._id);
                 }
             });
