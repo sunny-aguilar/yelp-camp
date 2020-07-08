@@ -138,27 +138,27 @@ function isLoggedIn(req, res, next) {
 
 // 
 function checkCampgroundOwnership() {
-        // is user logged in
-        if (req.isAuthenticated()) {
-            // if logged in, does user own the campground otherwise redirect
-            Campground.findById(req.params.id, function(err, foundCampground) {
-                if (err) {
-                    res.redirect('/campgrounds');
+    // is user logged in
+    if (req.isAuthenticated()) {
+        // if logged in, does user own the campground otherwise redirect
+        Campground.findById(req.params.id, function(err, foundCampground) {
+            if (err) {
+                res.redirect('/campgrounds');
+            }
+            else {
+                if (foundCampground.author.id.equals(req.user._id)) {
+                    res.render('campgrounds/edit', {campground: foundCampground});
                 }
                 else {
-                    if (foundCampground.author.id.equals(req.user._id)) {
-                        res.render('campgrounds/edit', {campground: foundCampground});
-                    }
-                    else {
-                        res.send('You dont have permission to do that!');
-                    }
+                    res.send('You dont have permission to do that!');
                 }
-            });
-        }
-        else {
-            // if not signed in, redirect
-            res.send('You need to be logged in');
-        }
+            }
+        });
+    }
+    else {
+        // if not signed in, redirect
+        res.send('You need to be logged in');
+    }
 }
 
 
