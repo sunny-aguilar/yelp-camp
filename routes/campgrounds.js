@@ -33,7 +33,7 @@ router.post('/', isLoggedIn, function(req, res) {
         id: req.user._id,
         username: req.user.username
     }
-    let newCampground = {name: name, image: image, description: desc};
+    let newCampground = {name: name, image: image, description: desc, author: author};
 
     // create new campground and save to database
     Campground.create(newCampground, function(err, newlyCreated) {
