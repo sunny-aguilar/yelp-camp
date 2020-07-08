@@ -4,6 +4,7 @@
 const express = require('express');
 const router = express.Router();
 const Campground = require('../models/campground');
+const campground = require('../models/campground');
 
 
 // campgrounds
@@ -82,6 +83,9 @@ router.get('/:id/edit', function(req, res) {
                 res.redirect('/campgrounds');
             }
             else {
+                if (campground.author.id === req.user._id) {
+                    
+                }
                 res.render('campgrounds/edit', {campground: foundCampground});
             }
         });
