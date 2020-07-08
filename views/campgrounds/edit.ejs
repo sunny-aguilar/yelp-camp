@@ -1,7 +1,7 @@
 
 
 <h1>Edit Campground</h1>
-<form class="form-group" action="/campgrounds/<%= campground._id %>" method="POST">
+<form class="form-group" action="/campgrounds/<%= campground._id %>/edit?_method=PUT" method="POST">
     <div class="form-group">
         <input class="form-control form-control-lg" type="text" name="name" placeholder="campground name" required>
     </div>
