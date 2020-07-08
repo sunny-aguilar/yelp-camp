@@ -79,13 +79,18 @@ router.get('/:id/edit', function(req, res) {
             res.redirect('/campgrounds');
         }
         else {
-            res.render('campgrounds/edit', {campground: campground});
+            res.render('campgrounds/edit', {campground: foundCampground});
         }
     });
 });
 
 // update campground route
+router.put('/:id', function(req, res) {
+    // find and update the correct campground
+    Campground.findByIdAndUpdate();
 
+    // redirect show campgrounds page
+});
 
 
 
