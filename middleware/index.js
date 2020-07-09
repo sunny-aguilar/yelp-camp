@@ -31,7 +31,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
     }
     else {
         // flash message
-        req.flash('error', 'Please Login First!');
+        req.flash('error', 'Please Login First.');
         // if not signed in, redirect
         res.redirect('back');
     }
@@ -59,6 +59,8 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
         });
     }
     else {
+        // flash message
+        req.flash('error', 'Please Login First.');
         // if not signed in, redirect
         res.redirect('back');
     }
