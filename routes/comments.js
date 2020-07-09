@@ -88,7 +88,7 @@ router.delete('/:comment_id', middleware.checkCommentOwnership, function(req, re
         }
         else {
             // flash message
-            req.flash('success', ');
+            req.flash('success', ''');
             res.redirect('/campgrounds/' + req.params.id);
         }
     });
