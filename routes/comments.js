@@ -52,7 +52,7 @@ router.post('/', isLoggedIn, function(req, res) {
 
 // edit comments
 router.get('/:comment_id/edit', function(req, res) {
-    res.render('edit');
+    res.send('Edit route for comment!');
 });
 
 
