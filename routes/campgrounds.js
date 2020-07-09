@@ -10,7 +10,6 @@ const middleware = require('../middleware');
 
 // campgrounds
 router.get('/', function(req, res) {
-    console.log(req.user);
     // get all campgrounds from DB
     Campground.find({}, function(err, allCampgrounds) {
         if (err) {
