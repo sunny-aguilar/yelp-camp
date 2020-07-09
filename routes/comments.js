@@ -74,6 +74,18 @@ router.put('/:comment_id', function(req, res) {
     });
 });
 
+// delete comments route
+router.delete('/:comment_id', function(req, res) {
+    // find by ID and remove
+    res.send('Destroy comments route!');
+});
+
+
+
+
+
+
+
 
 // middleware - checks if user is logged in
 function isLoggedIn(req, res, next) {
