@@ -45,6 +45,8 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
                     comment.save();
                     campground.comments.push(comment);
                     campground.save();
+                    // flash message
+                    req.flash('success', 'Successfully added a comment.');
                     res.redirect('/campgrounds/' + campground._id);
                 }
             });
