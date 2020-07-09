@@ -12,6 +12,8 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
         // if logged in, does user own the campground otherwise redirect
         Campground.findById(req.params.id, function(err, foundCampground) {
             if (err) {
+                // flash message
+                req.flash('error', 'Campground not found {DB error}!');
                 // if not signed in, go back to previous page user was on
                 res.redirect('back');
             }
@@ -20,12 +22,16 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
                     next();
                 }
                 else {
+                    // flash message
+                    req.flash('error', 'You are not authorized to do that.');
                     res.redirect('back');
                 }
             }
         });
     }
     else {
+        // flash message
+        req.flash('error', 'Please Login First!');
         // if not signed in, redirect
         res.redirect('back');
     }
