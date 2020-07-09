@@ -64,7 +64,14 @@ router.get('/:comment_id/edit', function(req, res) {
 
 // handle edit comments logic
 router.put('/:comment_id', function(req, res) {
-    res.send('Update comments POST route');
+    Comment.findByIdAndUpdate(req.params.comments_id, req.body.comment, function(err, updatedComments) {
+        if (err) {
+            res.redirect('back');
+        }
+        else {
+            res.redirect('/campgrounds' + );
+        }
+    });
 });
 
 
