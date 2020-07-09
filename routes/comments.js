@@ -77,7 +77,14 @@ router.put('/:comment_id', function(req, res) {
 // delete comments route
 router.delete('/:comment_id', function(req, res) {
     // find by ID and remove
-    res.
+    Comment.findByIdAndRemove(req, paras, comment_id, function(err) {
+        if (err) {
+            res.redirect('back')
+        }
+        else {
+            
+        }
+    });
 });
 
 
