@@ -74,8 +74,8 @@ router.put('/:comment_id', checkCommentOwnership, function(req, res) {
     });
 });
 
-// delete comments route
-router.delete('/:comment_id', function(req, res) {
+// delete/destroy comments route
+router.delete('/:comment_id', checkCommentOwnership, function(req, res) {
     // find by ID and remove
     Comment.findByIdAndRemove(req.params.comment_id, function(err) {
         if (err) {
