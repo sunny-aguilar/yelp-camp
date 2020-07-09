@@ -6,7 +6,7 @@
 <div class='container'>
     <div class='row justify-content-center'>
         <div class='ol-lg-6 col-md-10 col-sm-12'>
-            <h1 class='mb-4 text-center'>Add New Comment to <%= campground.name %></h1>
+            <h1 class='mb-4 text-center'>Edit <%= campground.name %></h1>
             <form class='form-group' action='/campgrounds/<%= campground._id %>/comments' method='POST'>
                 <div class='form-group'>
                     <input class='form-control form-control-lg' type='text' name='comment[text]' placeholder='text'>
