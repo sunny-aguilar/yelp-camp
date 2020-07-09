@@ -53,6 +53,8 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
                     next();
                 }
                 else {
+                    // flash message
+                    req.flash('error', 'You are not authorized to do that.');
                     res.redirect('back');
                 }
             }
