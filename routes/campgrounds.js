@@ -106,7 +106,7 @@ router.delete('/:id', checkCampgroundOwnership, function(req, res) {
     });
 });
 
-
+// edit comments
 router.get('/:comment_id/edit', function(req, res) {
     res.send('Edit route for comment!');
 });
