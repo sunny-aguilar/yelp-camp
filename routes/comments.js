@@ -102,4 +102,31 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login');
 }
 
+// middleware - checks if user has permissions
+function checkCommentOwnership(req, res, next) {
+    // is user logged in
+    if (req.isAuthenticated()) {
+        // if logged in, does user own the campground otherwise redirect
+        Comment.findById(req.params.id, function(err, foundCampground) {
+            if (err) {
+                // if not signed in, go back to previous page user was on
+                res.redirect('back');
+            }
+            else {
+                if (foundCampground.author.id.equals(req.user._id)) {
+                    next();
+                }
+                else {
+                    res.redirect('back');
+                }
+            }
+        });
+    }
+    else {
+        // if not signed in, redirect
+        res.redirect('back');
+    }
+}
+
+
 module.exports = router;
