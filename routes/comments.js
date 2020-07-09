@@ -51,7 +51,7 @@ router.post('/', isLoggedIn, function(req, res) {
 
 
 // edit comments
-router.get('/:comment_id/edit', function(req, res) {
+router.get('/:comment_id/edit', checkCommentOwnership, function(req, res) {
     Comment.findById(req.params.comment_id, function(err, foundComment) {
         if (err) {
             res.redirect('back');
@@ -91,9 +91,6 @@ router.delete('/:comment_id', function(req, res) {
 
 
 
-
-
-
 // middleware - checks if user is logged in
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -107,13 +104,14 @@ function checkCommentOwnership(req, res, next) {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
-        Comment.findById(req.params.id, function(err, foundCampground) {
+        Comment.findById(req.params.comment_id, function(err, foundComment) {
             if (err) {
                 // if not signed in, go back to previous page user was on
                 res.redirect('back');
             }
             else {
-                if (foundCampground.author.id.equals(req.user._id)) {
+                // does the user own the comment?
+                if (foundComment.author.id.equals(req.user._id)) {
                     next();
                 }
                 else {
