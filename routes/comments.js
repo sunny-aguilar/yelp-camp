@@ -57,7 +57,7 @@ router.get('/:comment_id/edit', function(req, res) {
             res.redirect('back');
         }
         else {
-            res.render('comments/edit', {campground_id: req.params.id});
+            res.render('comments/edit', {campground_id: req.params.id, comment: foundComment});
         }
     })
 });
