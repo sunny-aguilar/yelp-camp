@@ -24,7 +24,7 @@ router.get('/', function(req, res) {
     });
 });
 
-// POST route
+// POST/CREATE route - add a new campground to DB
 router.post('/', middleware.isLoggedIn, function(req, res) {
     // get data from form and add to campgrounds array
     const name = req.body.name;
