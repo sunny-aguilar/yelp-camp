@@ -33,6 +33,8 @@ router.post('/', middleware.isLoggedIn, function(req, res) {
             console.log(req.body.comment);
             Comment.create(req.body.comment, function(err, comment) {
                 if (err) {
+                    // flash message
+                    req.flash('error', 'Something went wrong.');
                     console.log(err);
                 }
                 else {
