@@ -82,7 +82,7 @@ router.delete('/:comment_id', function(req, res) {
             res.redirect('back')
         }
         else {
-            
+            res.redirect('/campgrounds/' + req.params.id);
         }
     });
 });
