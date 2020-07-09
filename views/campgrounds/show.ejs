@@ -27,7 +27,7 @@
                     <!-- if there is a current user signed in and user owns the campground -->
                     <% if (currentUser && campground.author.id.equals(currentUser._id)) { %>
                         <a class='btn btn-sm btn-warning' href='/campgrounds/<%= campground._id %>/edit'>edit</a>
-                        <form id='delete-form' action='/campgrounds/<%= campground._id %>?_method=DELETE' method='POST'>
+                        <form class='delete-form' action='/campgrounds/<%= campground._id %>?_method=DELETE' method='POST'>
                             <button class="btn btn-sm btn-danger">delete</button>
                         </form>
                     <% } %>
@@ -46,8 +46,8 @@
                             <span class='float-right'>10 days ago</span>
                             <p><%= comment.text %></p>
                             <a href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit" class="btn btn-sm btn-warning">edit</a>
-                            <form action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                <input class='btn btn-sm btn-danger' type="submit" value="">
+                            <form class='delete-form' action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                <input class='btn btn-sm btn-danger' type="submit" value="delete">
                             </form>
                         </div>
                     </div>
