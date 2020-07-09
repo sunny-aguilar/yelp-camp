@@ -67,7 +67,6 @@ router.get('/:id', function(req, res) {
         }
         else {
             // render template with that ID
-            console.log(foundCampground);
             res.render('campgrounds/show', {campground: foundCampground});
         }
     });
