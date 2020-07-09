@@ -63,7 +63,9 @@ router.get('/:comment_id/edit', function(req, res) {
 });
 
 // handle edit comments logic
-router.put('/campgrounds/:id/comments/:comment_id');
+router.put('/:comment_id', function(req, res) {
+    res.send('Update comments POST route');
+});
 
 
 // middleware - checks if user is logged in
