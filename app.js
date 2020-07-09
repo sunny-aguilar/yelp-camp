@@ -5,6 +5,7 @@ const   express             = require('express'),               // add express m
         app                 = express(),
         bodyParser          = require('body-parser'),
         mongoose            = require('mongoose'),              // add mongoose
+        flash               = require('connect-flash'),
         passport            = require('passport'),
         LocalStrategy       = require('passport-local'),
         methodOverride      = require('method-override'),
@@ -33,6 +34,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');                  // use EJS
 app.use(express.static(__dirname + '/public')); // css file in public dir
 app.use(methodOverride('_method'));
+app.use(flash());
 // seedDB();                                       // seed database
 
 // PASSPORT CONFIGURATION
