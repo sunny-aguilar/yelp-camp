@@ -52,7 +52,14 @@ router.post('/', isLoggedIn, function(req, res) {
 
 // edit comments
 router.get('/:comment_id/edit', function(req, res) {
-    res.render('comments/edit', {campground_id: req.params.id});
+    Comment.findById(req.params.comment_id, function(err, foundComment) {
+        if (err) {
+            res.redirect('back');
+        }
+        else {
+            res.render('comments/edit', {campground_id: req.params.id});
+        }
+    })
 });
 
 
