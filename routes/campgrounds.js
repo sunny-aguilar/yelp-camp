@@ -66,7 +66,7 @@ router.get('/:id', function(req, res) {
             req.flash('error', 'Campground not found.');
             // handle error
             console.log(err);
-            res.redirect('back');
+            res.redirect('/campgrounds');
         }
         else {
             // render template with that ID
