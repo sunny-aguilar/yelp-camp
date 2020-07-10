@@ -39,7 +39,7 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
     const newCampground = {name: name, price: price, image: image, description: desc, author: author};
 
     // create new campground and save to database
-    Campground.create(newCampground, function(err, newlyCreated) {
+    Campground.create(newCampground, (err, newlyCreated) => {
         if (err) {
             console.log(err);
         }
