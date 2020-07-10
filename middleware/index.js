@@ -45,6 +45,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
         Comment.findById(req.params.comment_id, function(err, foundComment) {
             if (err) {
                 // flash
+                req.flash('error', 'Comment not found');
                 // if not signed in, go back to previous page user was on
                 res.redirect('back');
             }
