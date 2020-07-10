@@ -10,6 +10,7 @@ const Comment = require('./models/comment');
 const data = [
     {
         name: 'Putah Creek',
+        price: 10.00,
         image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg',
         description: 'Putah Creek (Patwin: Liwaito) is a major stream in Northern California, a tributary of the Yolo Bypass, and ultimately, the Sacramento River.',
         author:{
@@ -19,6 +20,7 @@ const data = [
     },
     {
         name: 'Lake Solano',
+        price: 2.00,
         image: 'https://images.pexels.com/photos/354611/pexels-photo-354611.jpeg',
         description: 'Lake Solano is a reservoir formed by Putah Diversion Dam impounding Putah Creek, located in the Vaca Mountains within Yolo County and northern Solano County, California.',
         author:{
@@ -28,6 +30,7 @@ const data = [
     },
     {
         name: 'Lake Berryesa',
+        price: 5.00,
         image: 'https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg',
         description: 'Lake Berryessa is the largest lake in Napa County, California. This reservoir in the Vaca Mountains was formed following the construction of the Monticello Dam on Putah Creek in the 1950s.',
         author:{
@@ -37,6 +40,7 @@ const data = [
     },
     {
         name: 'American River',
+        price: 3.00,
         image: 'https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg',
         description: 'The North Fork American River is the longest branch of the American River in Northern California. It is 88 miles long from its source at the crest of the Sierra Nevada, near Lake Tahoe, to its mouth at Folsom Lake northeast of Sacramento.',
         author:{
@@ -46,6 +50,7 @@ const data = [
     },
     {
         name: 'Sacramento River',
+        price: 1.00,
         image: 'https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg',
         description: 'The Sacramento River is the principal river of Northern California in the United States, and is the largest river in California. Rising in the Klamath Mountains, the river flows south for 400 miles before reaching the Sacramento–San Joaquin River Delta and San Francisco Bay.',
         author:{
@@ -55,6 +60,7 @@ const data = [
     },
     {
         name: 'Folsom Lake',
+        price: 5.00,
         image: 'https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg',
         description: 'Folsom Lake is a reservoir on the American River in the Sierra Nevada foothills of California, United States. It is located within Placer, El Dorado, and Sacramento counties. It is about 25 mi northeast of Sacramento.',
         author:{
@@ -64,6 +70,7 @@ const data = [
     },
     {
         name: 'Cache Creek',
+        price: 4.00,
         image: 'https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg',
         description: 'Cache Creek is an 87-mile-long stream in Lake, Colusa and Yolo counties, California.',
         author:{
@@ -73,6 +80,7 @@ const data = [
     },
     {
         name: 'South Lake Tahoe',
+        price: 15.00,
         image: 'https://images.pexels.com/photos/2516423/pexels-photo-2516423.jpeg',
         description: 'South Lake Tahoe is a California resort city on Lake Tahoe, in the Sierra Nevada mountains. It’s known for nearby ski resorts and beaches, like El Dorado Beach, with its picnic areas. The city’s restaurants and bars merge with the casinos of adjacent Stateline, Nevada. Van Sickle Bi-State Park has wooded trails and lake views. West of the city, Emerald Bay State Park includes Vikingsholm, a 1929 Nordic-style mansion.',
         author:{
