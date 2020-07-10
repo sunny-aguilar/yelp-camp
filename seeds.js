@@ -102,7 +102,7 @@ function seedDB() {
 
             // add a campgrounds
             data.forEach((seed) => {
-                Campground.create(seed, function(err, campground) {
+                Campground.create(seed, (err, campground) => {
                     if (err) {
                         console.log(err);
                     }
@@ -115,7 +115,7 @@ function seedDB() {
                                 text: 'This is a comment',
                                 author: 'Homer'
                             },
-                            function(err, comment) {
+                            (err, comment) => {
                                 if (err) {
                                     console.log(err);
                                 }
