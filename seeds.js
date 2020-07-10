@@ -101,7 +101,7 @@ function seedDB() {
             console.log('Removed campgrounds!');
 
             // add a campgrounds
-            data.forEach(function(seed) {
+            data.forEach((seed) => {
                 Campground.create(seed, function(err, campground) {
                     if (err) {
                         console.log(err);
