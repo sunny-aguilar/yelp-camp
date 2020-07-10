@@ -38,7 +38,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
 }
 
 // middleware - checks if user has permissions
-middlewareObj.checkCommentOwnership = function(req, res, next) {
+middlewareObj.checkCommentOwnership = (req, res, next) => {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
