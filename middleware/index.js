@@ -6,7 +6,7 @@ const Comment = require('../models/comment');
 const middlewareObj = {};
 
 // middleware - checks if user has permissions
-middlewareObj.checkCampgroundOwnership = function(req, res, next) {
+middlewareObj.checkCampgroundOwnership = (req, res, next) => {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
