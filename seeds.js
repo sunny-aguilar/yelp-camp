@@ -93,7 +93,7 @@ const data = [
 // remove and add campgrounds
 function seedDB() {
     // remove all campgrounds
-    Campground.remove({}, function(err) {
+    Campground.remove({}, (err) => {
         if (err) {
             console.log(err);
         }
