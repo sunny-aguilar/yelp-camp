@@ -99,7 +99,7 @@ router.put('/:id', middleware.checkCampgroundOwnership, (req, res) => {
 
 // destroy campground route
 router.delete('/:id', middleware.checkCampgroundOwnership, (req, res) => {
-    Campground.findByIdAndRemove(req.params.id, function(err) {
+    Campground.findByIdAndRemove(req.params.id, (err) => {
         if (err) {
             res.redirect('/campgrounds');
         }
