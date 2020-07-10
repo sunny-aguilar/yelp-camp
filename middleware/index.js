@@ -10,7 +10,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
-        Campground.findById(req.params.id, function(err, foundCampground) {
+        Campground.findById(req.params.id, (err, foundCampground) => {
             if (err || !foundCampground) {
                 // flash message
                 req.flash('error', 'Campground not found {DB error}!');
