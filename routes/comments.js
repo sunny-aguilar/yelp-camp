@@ -9,7 +9,7 @@ const middleware = require('../middleware');
 
 
 // comments new
-router.get('/new', middleware.isLoggedIn, function(req, res) {
+router.get('/new', middleware.isLoggedIn, (req, res) => {
     // find campground by id
     Campground.findById(req.params.id, function(err, campground) {
         if (err) {
