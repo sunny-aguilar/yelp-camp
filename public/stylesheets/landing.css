@@ -37,7 +37,7 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 50s linear infinite;
+    animation: imageAnimation 60s linear infinite;
 }
 
 .slideshow li:nth-child(1) {
@@ -56,8 +56,13 @@ body {
     animation-delay: 30s;
 }
 .slideshow li:nth-child(5) {
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+    background-image: url(https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg);
     animation-delay: 40s;
+}
+
+.slideshow li:nth-child(6) {
+    background-image: url(https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg);
+    animation-delay: 50s;
 }
 
 @keyframes imageAnimation {
