@@ -9,9 +9,9 @@ const middleware = require('../middleware');
 
 
 // campgrounds
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
     // get all campgrounds from DB
-    Campground.find({}, function(err, allCampgrounds) {
+    Campground.find({}, (err, allCampgrounds) => {
         if (err) {
             console.log(err);
         }
