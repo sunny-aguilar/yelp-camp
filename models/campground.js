@@ -24,11 +24,3 @@ const campgroundSchema = new mongoose.Schema({
 
 // export DB model
 module.exports = mongoose.model('Campground', campgroundSchema);
-
-
-
-
-
-
-
-
