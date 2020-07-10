@@ -74,8 +74,8 @@ router.get('/:comment_id/edit', middleware.checkCommentOwnership, (req, res) => 
 });
 
 // handle edit comments logic
-router.put('/:comment_id', middleware.checkCommentOwnership, function(req, res) {
-    Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComments) {
+router.put('/:comment_id', middleware.checkCommentOwnership, (req, res) => {
+    Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, (err, updatedComments) => {
         if (err) {
             res.redirect('back');
         }
