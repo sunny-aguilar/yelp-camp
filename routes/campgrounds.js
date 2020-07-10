@@ -53,7 +53,7 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
 });
 
 // new campground route
-router.get('/new', middleware.isLoggedIn, function(req, res) {
+router.get('/new', middleware.isLoggedIn, (req, res) => {
     res.render('campgrounds/new');
 });
 
