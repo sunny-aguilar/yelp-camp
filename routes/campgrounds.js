@@ -59,9 +59,9 @@ router.get('/new', middleware.isLoggedIn, (req, res) => {
 
 // show specific campground & additional campground info
 // :id can be any string, test it out in browser /campgrounds/asdfads
-router.get('/:id', function(req, res) {
+router.get('/:id', (req, res) => {
     // find campground with provided id
-    Campground.findById(req.params.id).populate('comments').exec(function(err, foundCampground) {
+    Campground.findById(req.params.id).populate('comments').exec((err, foundCampground) => {
         if (err || !foundCampground) {
             // flash
             req.flash('error', 'Campground not found.');
