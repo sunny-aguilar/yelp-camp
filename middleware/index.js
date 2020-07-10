@@ -42,7 +42,7 @@ middlewareObj.checkCommentOwnership = (req, res, next) => {
     // is user logged in
     if (req.isAuthenticated()) {
         // if logged in, does user own the campground otherwise redirect
-        Comment.findById(req.params.comment_id, function(err, foundComment) {
+        Comment.findById(req.params.comment_id, (err, foundComment) => {
             if (err || !foundComment) {
                 // flash
                 req.flash('error', 'Comment not found');
