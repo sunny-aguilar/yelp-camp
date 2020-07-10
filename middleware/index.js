@@ -44,6 +44,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
         // if logged in, does user own the campground otherwise redirect
         Comment.findById(req.params.comment_id, function(err, foundComment) {
             if (err) {
+                // flash
                 // if not signed in, go back to previous page user was on
                 res.redirect('back');
             }
